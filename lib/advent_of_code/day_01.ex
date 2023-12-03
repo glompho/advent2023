@@ -44,17 +44,13 @@ defmodule AdventOfCode.Day01 do
     |> String.split("\n")
     |> Enum.map(&String.replace(&1, ~r/[^0-9]/, ""))
     |> Enum.map(fn s -> String.to_integer(first_with_last(s)) end)
-    |> IO.inspect()
     |> Enum.reduce(&+/2)
-
-    # |> IO.inspect(label: "Part 1 Results")
   end
 
   def part2(args) do
     args
     |> String.split("\n")
     |> Enum.map(fn s -> String.to_integer(first_with_last(s)) end)
-    |> IO.inspect()
     |> Enum.reduce(&+/2)
   end
 end

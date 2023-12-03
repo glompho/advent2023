@@ -39,7 +39,7 @@ defmodule AdventOfCode.Day02 do
         0
       end
     end)
-    |> Enum.reduce(&+/2)
+    |> Enum.sum()
   end
 
   def part2(args) do
@@ -52,7 +52,7 @@ defmodule AdventOfCode.Day02 do
       |> find_highest()
       |> Enum.map(fn {_c, number} -> number end)
     end)
-    |> Enum.map(fn s -> Enum.reduce(s, &*/2) end)
-    |> Enum.reduce(&+/2)
+    |> Enum.map(&Enum.product(&1))
+    |> Enum.sum()
   end
 end
