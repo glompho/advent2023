@@ -11,6 +11,7 @@ defmodule AdventOfCode.Day04 do
       |> Enum.map(fn nums ->
         nums
         |> String.split(" ", trim: true)
+        # for speed
         |> Enum.map(&String.to_integer(&1))
       end)
     end)
