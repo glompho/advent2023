@@ -20,14 +20,14 @@ defmodule AdventOfCode.Day06 do
   end
 
   def quadratic(a, b, c) do
-    b_squared = Math.pow(b, 2)
-    q = b_squared - 4.0 * a * c
+    b_squared = b ** 2
+    q = b_squared - 4 * a * c
 
     if q < 0 do
       :no_real_solutions
     else
-      q_root = Math.sqrt(q)
-      [(-b + q_root) / (2.0 * a), (-b - q_root) / (2.0 * a)]
+      q_root = :math.sqrt(q)
+      [(-b + q_root) / (2 * a), (-b - q_root) / (2 * a)]
     end
   end
 
